@@ -1,0 +1,45 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+}
+
+.categories {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.categories ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.category {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.products {
+  padding: 20px;
+}
+
+.product {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+}
+
+.product-info {
+  padding: 20px;
+  background-color: #f0f0f0;
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */

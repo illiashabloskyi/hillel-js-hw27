@@ -1,11 +1,11 @@
 const products = {
   electronics: [
-    { name: "Smartphone", price: 500 },
-    { name: "Laptop", price: 1000 },
+    { name: "Телефон", price: 500, info: "опис"},
+    { name: "Ноутбук", price: 1000, info: "опис" },
   ],
   clothing: [
-    { name: "T-shirt", price: 20 },
-    { name: "Jeans", price: 50 },
+    { name: "Футболка", price: 20, info: "опис" },
+    { name: "Джинси", price: 50, info: "опис" },
   ],
 };
 
@@ -24,7 +24,7 @@ function showCategory(category) {
   products[category].forEach((product) => {
     const productElement = document.createElement("div");
     productElement.classList.add("product");
-    productElement.textContent = `${product.name} - $${product.price}`;
+    productElement.textContent = `${product.name} - ${product.price} грн.`;
     productElement.addEventListener("click", () => showProductInfo(product));
     productsContainer.appendChild(productElement);
   });
@@ -41,13 +41,14 @@ function showProductInfo(product) {
   const productInfo = document.createElement("div");
   productInfo.innerHTML = `
     <h2>${product.name}</h2>
-    <p>Price: $${product.price}</p>
-    <button onclick="buyProduct('${product.name}')">Buy</button>
+    <p>Ціна: ${product.price}грн.</p>
+    <p>Опис: ${product.info}</p>
+    <button onclick="buyProduct('${product.name}')">Купити</button>
   `;
   productInfoContainer.appendChild(productInfo);
 }
 
 function buyProduct(productName) {
-  alert(`You have successfully purchased ${productName}!`);
+  alert(`Ви купили ${productName}!`);
   showCategories();
 }
